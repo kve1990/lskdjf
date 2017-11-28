@@ -25,7 +25,8 @@
 		   })
 		  .then(function(res) {
 		    console.log('Response', res);
-		    const scheduleId = `scheduleId:'${btoa(JSON.stringify(res))}'`;
+		    const scheduleId = btoa(JSON.stringify(res))`;
+		    console.log(scheduleId);
 		    window.scheduleApp={scheduleId:scheduleId,id:'mjyuote1nz'},window.onload=function(){var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='https://wj.sportpriority.com/assets/widget.js',document.head.appendChild(a)};
 		  })
 		  .catch( console.log );		
