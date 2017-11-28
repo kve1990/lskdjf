@@ -17,6 +17,16 @@
 				b[c[0]] = c[1];
 			}
 	        console.log(b);
+		fetch('https://api.sportpriority.com/v1/vk-widget-context?gid='+b.group_id)
+		  .then(function(response) {
+		    alert(response.headers.get('Content-Type')); // application/json; charset=utf-8
+		    alert(response.status); // 200
+		    return response.json();
+		   })
+		  .then(function(res) {
+		    console.log('Response', res);
+		  })
+		  .catch( console.log );
 		window.scheduleApp={scheduleId:'eyJjaXR5VXJsTmFtZSI6Im1vc2NvdyIsImNsdWJOZXRJZCI6IjNkZjlhY2RhN2YzMTQyZmNhOGE2Y2ZlZjc4YTBjNzVlIiwiY2x1YklkIjoiMDY2NDUyYmZmZDU1NDQ3MDg4MWE5ZDIxNWRlZmVkZWQiLCJpZCI6bnVsbCwic3RhcnREYXRlIjpudWxsLCJzdGFydFRpbWUiOm51bGwsInByb3RvdHlwZUlkIjpudWxsfQ==',id:'mjyuote1nz'},window.onload=function(){var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='https://wj.sportpriority.com/assets/widget.js',document.head.appendChild(a)};
 	</script>
 	<div id="mjyuote1nz"></div>
